@@ -121,7 +121,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="5:30am"
+                        android:text="humidity"
                         android:textSize="12sp"/>
 
                     <TextView
@@ -155,7 +155,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="5.30am"
+                        android:text="pressure"
                         android:textSize="12sp"/>
 
                     <TextView
@@ -233,7 +233,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="5:30am"
+                        android:text="sunrise"
                         android:textSize="12sp"/>
 
                     <TextView
@@ -267,7 +267,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="5.30am"
+                        android:text="sunset"
                         android:textSize="12sp"/>
 
                     <TextView

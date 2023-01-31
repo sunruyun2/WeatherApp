@@ -16,7 +16,6 @@ import android.widget.TextView;
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
-import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.util.Date;
@@ -82,32 +81,33 @@ public class MainActivity extends AppCompatActivity {
         protected void onPostExecute(String result) {
             super.onPostExecute(result);
             try {
-                Log.i("DEBUGGER","0");
-                Log.i("DEBUGGER",result);
-               JSONObject jsonObj = new JSONObject(result);
-                Log.i("DEBUGGER","0.1");
-               JSONObject main = jsonObj.getJSONObject("main");
-                Log.i("DEBUGGER","0.2");
-               JSONObject sys = jsonObj.getJSONObject("sys");
-               JSONObject wind = jsonObj.getJSONObject("wind");
-               JSONObject weather = jsonObj.getJSONArray("weather").getJSONObject(0);
-               long updatedAt = jsonObj.getLong("dt");
-               String updatedAtText = "Updated at: " + new SimpleDateFormat("dd/MM/YYYY hh:MM: a", Locale.ENGLISH).format(new Date(updatedAt*1000));
-               String temp = main.getString("temp") + "°C";
-                Log.i("DEBUGGER","0.3");
-               String tempMin = "Min Temp: " + main.getString("temp_min") + "°C";
-               String tempMax = "Max Temp: " + main.getString("temp_max") + "°C";
-               String pressure = main.getString("pressure");
-               String humidity = main.getString("humidity");
-                Log.i("DEBUGGER","0.4");
-               long sunrise = sys.getLong("sunrise");
-               long sunset = sys.getLong("sunset");
-               String windSpeed = wind.getString("speed");
+                JSONObject jsonObj = new JSONObject(result);
+                JSONObject main = jsonObj.getJSONObject("main");
+                JSONObject sys = jsonObj.getJSONObject("sys");
+                JSONObject wind = jsonObj.getJSONObject("wind");
+                JSONObject weather = jsonObj.getJSONArray("weather").getJSONObject(0);
+
+                long updatedAt = jsonObj.getLong("dt");
+                String updatedAtText = "Updated at: " + new SimpleDateFormat("dd/MM/YYYY hh:MM: a", Locale.ENGLISH).format(new Date(updatedAt*1000));
+
+                double tempNum = Double.parseDouble(main.getString("temp")) -273.15;
+                String temp = String.format("%.2f", tempNum) + "°C";
+
+                double tempMinNum = Double.parseDouble(main.getString("temp_min"))-273.15;
+                String tempMin = "Min Temp: " + String.format("%.2f", tempMinNum) + "°C";
+                double tempMaxNum = Double.parseDouble(main.getString("temp_max")) -273.15;
+                String tempMax = "Max Temp: " + String.format("%.2f", tempMaxNum) + "°C";
+                String pressure = main.getString("pressure");
+                String humidity = main.getString("humidity");
+
+                long sunrise = sys.getLong("sunrise");
+                long sunset = sys.getLong("sunset");
+                String windSpeed = wind.getString("speed");
                 Log.i("DEBUGGER","0.5");
-               String weatherDescription = weather.getString("description");
-                Log.i("DEBUGGER","0.6");
-               String address = jsonObj.getString("name") + sys.getString("country");
-                Log.i("DEBUGGER","6");
+                String weatherDescription = weather.getString("description");
+
+                String address = jsonObj.getString("name") + sys.getString("country");
+
 
                addressView = findViewById(R.id.address);
                addressView.setText(address);
