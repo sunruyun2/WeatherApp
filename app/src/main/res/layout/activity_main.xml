@@ -42,6 +42,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
             android:orientation="vertical">
 
             <TextView
@@ -122,17 +123,20 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="humidity"
-                        android:textSize="12sp"/>
+                        android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/humid"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Humid"
-                        android:textSize="14sp"/>
+                        android:textSize="14sp" />
                 </LinearLayout>
-                <Space android:layout_width="10dp"
+
+                <Space
+                    android:layout_width="10dp"
                     android:layout_height="wrap_content" />
+
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -156,17 +160,20 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="pressure"
-                        android:textSize="12sp"/>
+                        android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/pressure"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Pressure"
-                        android:textSize="14sp"/>
+                        android:textSize="14sp" />
                 </LinearLayout>
-                <Space android:layout_width="10dp"
+
+                <Space
+                    android:layout_width="10dp"
                     android:layout_height="wrap_content" />
+
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -190,21 +197,25 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Wind"
-                        android:textSize="12sp"/>
+                        android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/wind"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Wind"
-                        android:textSize="14sp"/>
+                        android:textSize="14sp" />
                 </LinearLayout>
-                <Space android:layout_width="10dp"
+
+                <Space
+                    android:layout_width="10dp"
                     android:layout_height="wrap_content" />
             </LinearLayout>
+
             <Space
                 android:layout_width="wrap_content"
-                android:layout_height="10dp"/>
+                android:layout_height="10dp" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -234,17 +245,20 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="sunrise"
-                        android:textSize="12sp"/>
+                        android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/sunrise"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Sunrise"
-                        android:textSize="14sp"/>
+                        android:textSize="14sp" />
                 </LinearLayout>
-                <Space android:layout_width="10dp"
+
+                <Space
+                    android:layout_width="10dp"
                     android:layout_height="wrap_content" />
+
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -268,17 +282,20 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="sunset"
-                        android:textSize="12sp"/>
+                        android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/sunset"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="sunset"
-                        android:textSize="14sp"/>
+                        android:textSize="14sp" />
                 </LinearLayout>
-                <Space android:layout_width="10dp"
+
+                <Space
+                    android:layout_width="10dp"
                     android:layout_height="wrap_content" />
+
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -302,16 +319,18 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Created by"
-                        android:textSize="12sp"/>
+                        android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/info"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Ruyun"
-                        android:textSize="14sp"/>
+                        android:textSize="14sp" />
                 </LinearLayout>
-                <Space android:layout_width="10dp"
+
+                <Space
+                    android:layout_width="10dp"
                     android:layout_height="wrap_content" />
             </LinearLayout>
         </LinearLayout>
